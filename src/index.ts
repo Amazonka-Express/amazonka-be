@@ -41,7 +41,6 @@ app.get("/api/truck", async (req, res) => {
       }
     }
 
-    console.log("Route Points:", routePoints);
     for (const point of routePoints) {
       if (point && point.lat !== undefined && point.lng !== undefined) {
         coordinates.push(
