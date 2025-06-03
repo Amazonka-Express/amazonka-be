@@ -11,7 +11,7 @@ app.use(cors());
 app.get("/api/truck", async (req, res) => {
   try {
     const client = new truck.TruckRouterClient(
-      "localhost:50051",
+      process.env.TRUCK_URL || "localhost:50051",
       grpc.credentials.createInsecure()
     );
 
