@@ -8,7 +8,7 @@ const port = process.env.PORT || 3030;
 
 app.use(cors());
 
-app.get("/api/truck", async (req, res) => {
+app.get("/truck", async (req, res) => {
   try {
     const client = new truck.TruckRouterClient(
       process.env.TRUCK_URL || "localhost:50051",
